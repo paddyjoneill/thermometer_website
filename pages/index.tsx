@@ -1,13 +1,13 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
-import HomeDark from '../src/views/all-home-version/HomeDark'
+import React from 'react'
+import Layout from '../src/layout/Layout'
+import HomePage from '../src/pages/HomePage'
 
-const Home: NextPage = () => {
-  return (
-    <HomeDark />
-  )
+const Index = () => {
+    return <>
+        <Layout page={"Home"}>
+            <HomePage />
+        </Layout>
+    </>
 }
 
-export default Home
+export default Index

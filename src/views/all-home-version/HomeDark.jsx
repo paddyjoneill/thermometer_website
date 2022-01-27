@@ -19,11 +19,11 @@ const menuItem = [
 const HomeDark = () => {
   return (
     <div className="yellow">
-      <div className="demo-sticker">
+      {/* <div className="demo-sticker">
         <a href="/home-light">
           <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
         </a>
-      </div>
+      </div> */}
       <Tabs>
         <div className="header">
           <TabList className=" icon-menu  revealator-slideup revealator-once revealator-delay1">
@@ -39,7 +39,8 @@ const HomeDark = () => {
 
         <div className="tab-panel_list">
           {/* Hero Content Starts */}
-          <TabPanel className="home ">
+          {/* <TabPanel className="home "> */}
+            <div className="home">
             <div
               className="container-fluid main-container container-home p-0 "
               data-aos="fade-up"
@@ -48,26 +49,27 @@ const HomeDark = () => {
               <div className="color-block d-none d-lg-block"></div>
               <Hero />
             </div>
-          </TabPanel>
+            </div>
+          {/* </TabPanel> */}
           {/* Hero Content Ends */}
 
           {/* About Content Starts */}
-          <TabPanel className="about">
+          {/* <TabPanel className="about">
             <div data-aos="fade-up" data-aos-duration="1200">
               <div className="title-section text-left text-sm-center">
                 <h1>
                   ABOUT <span>ME</span>
                 </h1>
                 <span className="title-bg">Resume</span>
-              </div>
+              </div> */}
               {/* End title */}
-              <Index />
+              {/* <Index />
             </div>
-          </TabPanel>
+          </TabPanel> */}
           {/* About Content Ends */}
 
           {/* Portfolio Content Starts */}
-          <TabPanel className="portfolio professional">
+          {/* <TabPanel className="portfolio professional">
             <div
               className="title-section text-left text-sm-center"
               data-aos="fade-up"
@@ -77,22 +79,22 @@ const HomeDark = () => {
                 my <span>portfolio</span>
               </h1>
               <span className="title-bg">works</span>
-            </div>
+            </div> */}
             {/* End title */}
-            <div
+            {/* <div
               className="container grid-gallery main-content"
               data-aos="fade-up"
               data-aos-duration="1200"
               data-aos-delay="100"
             >
               <Portfolio />
-            </div>
+            </div> */}
             {/* End grid gallery */}
-          </TabPanel>
+          {/* </TabPanel> */}
           {/* Portfolio Content Ends */}
 
           {/* Contact Content Starts */}
-          <TabPanel className="contact">
+          {/* <TabPanel className="contact">
             <div
               className="title-section text-left text-sm-center"
               data-aos="fade-up"
@@ -108,9 +110,9 @@ const HomeDark = () => {
               data-aos="fade-up"
               data-aos-duration="1200"
             >
-              <div className="row">
+              <div className="row"> */}
                 {/*  Left Side Starts */}
-                <div className="col-12 col-lg-4">
+                {/* <div className="col-12 col-lg-4">
                   <h3 className="text-uppercase custom-title mb-0 ft-wt-600 pb-3">
                     Don't be shy !
                   </h3>
@@ -119,27 +121,27 @@ const HomeDark = () => {
                     discussing new projects, creative ideas or opportunities to
                     be part of your visions.
                   </p>
-                  <Address />
+                  <Address /> */}
                   {/* End Address */}
 
-                  <Social />
+                  {/* <Social /> */}
                   {/* End Social */}
-                </div>
+                {/* </div> */}
                 {/* Left Side Ends */}
 
                 {/*  Contact Form Starts  */}
-                <div className="col-12 col-lg-8">
+                {/* <div className="col-12 col-lg-8">
                   <Contact />
-                </div>
+                </div> */}
                 {/*  Contact Form Ends */}
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
             {/* End .container */}
-          </TabPanel>
+          {/* </TabPanel> */}
           {/* Contact Content Ends */}
 
           {/* Blog Content Starts */}
-          <TabPanel className="blog">
+          {/* <TabPanel className="blog">
             <div
               className="title-section text-left text-sm-center "
               data-aos="fade-up"
@@ -154,14 +156,14 @@ const HomeDark = () => {
               className="container"
               data-aos="fade-up"
               data-aos-duration="1200"
-            >
+            > */}
               {/*  Articles Starts  */}
-              <div className="row pb-50">
+              {/* <div className="row pb-50">
                 <Blog />
-              </div>
+              </div> */}
               {/* Articles Ends */}
-            </div>
-          </TabPanel>
+            {/* </div>
+          </TabPanel> */}
           {/* Blog Content Ends */}
         </div>
       </Tabs>

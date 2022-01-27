@@ -5,14 +5,13 @@ import Index from "../../components/about/index";
 const heroContent = {
   heroImage: "img/hero/dark.jpg",
   heroMobileImage: "img-mobile",
-  heroTitleName: "steve milner",
-  heroDesignation: "web designer",
-  heroDescriptions: `I'm a Tunisian based web designer & front‑end developer focused on
-  crafting clean & user‑friendly experiences, I am passionate about
-  building excellent software that improves the lives of those
-  around me.`,
-  heroBtn: "more about me",
+  heroTitleName: "AccSensum",
+  heroDesignation: "Downhole Thermometers",
+  heroDescriptions: `The best thermometers in the world, 
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente fugiat velit dolor asperiores quia in veniam impedit facilis beatae sit dicta officia tempora eius, nam, harum mollitia quidem esse. Tenetur perspiciatis doloribus ex cum delectus assumenda molestias iusto veniam, quo consectetur magni. A corporis illo aliquam libero deserunt beatae.`,
+  heroBtn: "learn more",
 };
+
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +26,8 @@ const Hero = () => {
           className="col-lg-4 bg position-fixed d-none d-lg-block"
           style={{
             backgroundImage: `url(${
-              process.env.PUBLIC_URL + heroContent.heroImage
+              // process.env.PUBLIC_URL + 
+              heroContent.heroImage
             })`,
           }}
         ></div>
@@ -39,7 +39,7 @@ const Hero = () => {
               alt="hero man"
             />
             <h1 className="text-uppercase poppins-font">
-              I'm {heroContent.heroTitleName}.
+              {heroContent.heroTitleName}.
               <span>{heroContent.heroDesignation}</span>
             </h1>
             <p className="open-sans-font">{heroContent.heroDescriptions}</p>
