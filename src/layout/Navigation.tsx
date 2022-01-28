@@ -41,7 +41,6 @@ const Navigation = (props: Props) => {
                             <Link href={item.route}>
                                 <a>
                                     <h2>{item.menuName}</h2>
-
                                 </a>
                             </Link>
                         </Tab>
