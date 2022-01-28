@@ -3,7 +3,15 @@ import Address from "../components/Address";
 import Contact from "../components/Contact";
 import Social from "../components/Social";
 
-const ContactPage = () => {
+interface Props{
+    streetAddress: string
+    city: string
+    postcode: string
+    phoneNumber: string
+    email: string
+  }
+
+const ContactPage = (props: Props) => {
     return (
            <div className="contact">
             <div
@@ -32,7 +40,7 @@ const ContactPage = () => {
                     discussing new projects, creative ideas or opportunities to
                     be part of your visions.
                   </p>
-                  <Address /> 
+                  <Address {...props}/> 
                   {/* End Address */}
 
                    <Social /> 

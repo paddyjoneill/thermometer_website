@@ -1,13 +1,22 @@
+import { GetStaticProps } from 'next'
 import React from 'react'
-import Layout from '../src/layout/Layout'
+import { BasePageProps } from '../interfaces/interfaces'
 import HomePage from '../src/pages/HomePage'
 
-const Index = () => {
-    return <>
-        <Layout page={"Home"}>
-            <HomePage />
-        </Layout>
-    </>
+interface Props extends BasePageProps{}
+
+const Index = (props: Props) => {
+    return  <HomePage />
+    
 }
 
 export default Index
+
+export const getStaticProps: GetStaticProps = async (context) => {
+    
+    const props: BasePageProps= {page: "Home"}
+
+    return {
+        props
+    }
+  }

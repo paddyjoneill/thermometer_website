@@ -1,11 +1,22 @@
+import { GetStaticProps } from "next";
 import React from "react";
-import Layout from "../../src/layout/Layout";
+import { BasePageProps } from "../../interfaces/interfaces";
 import PortfolioPage from "../../src/pages/PortfolioPage";
 
-const Portfolio = () => {
-    return <Layout page={"Portfolio"}>
-        <PortfolioPage />
-    </Layout>
+interface Props extends BasePageProps{}
+
+const Portfolio = (props: Props) => {
+
+    return <PortfolioPage />
 }
 
 export default Portfolio
+
+export const getStaticProps: GetStaticProps = async (context) => {
+    
+    const props: BasePageProps= {page: "Portfolio"}
+
+    return {
+        props
+    }
+  }

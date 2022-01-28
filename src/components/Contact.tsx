@@ -1,13 +1,18 @@
-import React from "react";
+import React, { ChangeEvent, useState } from "react";
 
 const Contact = () => {
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm();
 
-  const onSubmit = (data, e) => {
+  const [name, setName] = useState<string>("")
+  const [email, setEmail] = useState<string>("")
+  const [subject, setSubject] = useState<string>("")
+  const [message, setMessage] = useState<string>("")
+
+  const updateName = (event: ChangeEvent<HTMLInputElement>) => setName(event.target.value)
+  const updateEmail = (event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)
+  const updateSubject = (event: ChangeEvent<HTMLInputElement>) => setSubject(event.target.value)
+  const updateMessage = (event: ChangeEvent<HTMLTextAreaElement>) => setMessage(event.target.value)
+
+  const onSubmit = (data: any, e: { target: { reset: () => void; }; }) => {
     e.target.reset();
     console.log("Message submited: " + JSON.stringify(data));
   };
@@ -21,10 +26,11 @@ const Contact = () => {
           <div className="col-12 col-md-6">
             <div className="form-group">
               <input
-                // {...register("name", { required: true })}
                 type="text"
                 name="name"
                 placeholder="YOUR NAME"
+                value={name}
+                onChange={updateName}
               />
               {/* {errors.name && errors.name.type === "required" && (
                 <span className="invalid-feedback">Name is required</span>
@@ -50,6 +56,8 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="YOUR EMAIL"
+                value={email}
+                onChange={updateEmail}
               />
               {/* {errors.email && (
                 <span className="invalid-feedback">{errors.email.message}</span>
@@ -65,6 +73,8 @@ const Contact = () => {
                 type="text"
                 name="subject"
                 placeholder="YOUR SUBJECT"
+                value={subject}
+                onChange={updateSubject}
               />
               {/* {errors.subject && (
                 <span className="invalid-feedback">Message is required.</span>
@@ -79,6 +89,8 @@ const Contact = () => {
                 // {...register("message", { required: true })}
                 name="message"
                 placeholder="YOUR MESSAGE"
+                value={message}
+                onChange={updateMessage}
               ></textarea>
               {/* {errors.message && (
                 <span className="invalid-feedback">Message is required.</span>
