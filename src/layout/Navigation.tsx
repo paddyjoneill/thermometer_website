@@ -1,5 +1,5 @@
 import React from "react";
-import { Tab, Tabs, TabList } from "react-tabs";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Link from "next/link"
 import { useRouter } from "next/router";
 
@@ -27,6 +27,10 @@ const Navigation = (props: Props) => {
         router.push(menuItem[index].route)
     }
 
+    const tabPanels =  menuItem.map((item,i) => {
+        return <TabPanel key={i}><div></div></TabPanel>
+    })
+
     return (
         <Tabs selectedIndex={tabIndex} onSelect={onSelect}>
             <div className="header">
@@ -43,7 +47,9 @@ const Navigation = (props: Props) => {
                         </Tab>
                     ))}
                 </TabList>
+          {tabPanels}
             </div>
+
             {props.children}
         </Tabs>
     )

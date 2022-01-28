@@ -11,7 +11,7 @@ const BlogPage = () => {
                 data-aos-duration="1200"
             >
                 <h1>
-                    my <span>blog</span>
+                    case <span>studies</span>
                 </h1>
                 <span className="title-bg">posts</span>
             </div>

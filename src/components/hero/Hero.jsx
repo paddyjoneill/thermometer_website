@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import Modal from "react-modal";
-import Index from "../../components/about/index";
+import { useRouter } from "next/router";
+import React from "react";
 
 const heroContent = {
   heroImage: "img/hero/dark.jpg",
@@ -14,10 +13,9 @@ const heroContent = {
 
 
 const Hero = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  function toggleModalOne() {
-    setIsOpen(!isOpen);
-  }
+  const router = useRouter()
+
+  const goToAbout = () => router.push('/about')
 
   return (
     <>
@@ -43,46 +41,13 @@ const Hero = () => {
               <span>{heroContent.heroDesignation}</span>
             </h1>
             <p className="open-sans-font">{heroContent.heroDescriptions}</p>
-            <button className="button" onClick={toggleModalOne}>
+            <button className="button" onClick={goToAbout}>
               <span className="button-text">{heroContent.heroBtn}</span>
               <span className="button-icon fa fa-arrow-right"></span>
             </button>
           </div>
         </div>
       </div>
-      {/* End home-details-container */}
-
-      {/* Start Modal for About More */}
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={toggleModalOne}
-        contentLabel="My dialog"
-        className="custom-modal dark hero"
-        overlayClassName="custom-overlay dark"
-        closeTimeoutMS={500}
-      >
-        <div>
-          <button className="close-modal" onClick={toggleModalOne}>
-            <img src="/img/cancel.svg" alt="close icon" />
-          </button>
-          {/* End close icon */}
-
-          <div className="box_inner about">
-            <div data-aos="fade-up" data-aos-duration="1200">
-              <div className="title-section text-left text-sm-center">
-                <h1>
-                  ABOUT <span>ME</span>
-                </h1>
-                <span className="title-bg">Resume</span>
-              </div>
-              {/* End title */}
-              <Index />
-            </div>
-          </div>
-        </div>
-        {/* End modal box news */}
-      </Modal>
-      {/* End  Modal for About More */}
     </>
   );
 };
