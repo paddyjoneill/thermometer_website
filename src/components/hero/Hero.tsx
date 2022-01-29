@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
+import { HomePageProps } from "../../../interfaces/interfaces";
+
 
 const heroContent = {
   heroImage: "img/hero/dark.jpg",
@@ -11,8 +13,9 @@ const heroContent = {
   heroBtn: "learn more",
 };
 
+interface Props extends HomePageProps {}
 
-const Hero = () => {
+const Hero = (props: Props) => {
   const router = useRouter()
 
   const goToAbout = () => router.push('/about')
@@ -25,24 +28,26 @@ const Hero = () => {
           style={{
             backgroundImage: `url(${
               // process.env.PUBLIC_URL + 
-              heroContent.heroImage
+              // heroContent.heroImage
+              props.imageUrl
             })`,
           }}
         ></div>
         <div className="col-12 col-lg-8 offset-lg-4 home-details  text-center text-lg-start">
           <div>
             <img
-              src={`img/hero/${heroContent.heroMobileImage}.jpg`}
+              src={`img/hero/${props.mobileImageUrl}.jpg`}
+              // src={`img/hero/${heroContent.heroMobileImage}.jpg`}
               className="img-fluid main-img-mobile d-sm-block d-lg-none"
               alt="hero man"
             />
             <h1 className="text-uppercase poppins-font">
-              {heroContent.heroTitleName}.
-              <span>{heroContent.heroDesignation}</span>
+              {props.title}.
+              <span>{props.subTitle}</span>
             </h1>
-            <p className="open-sans-font">{heroContent.heroDescriptions}</p>
+            <p className="open-sans-font">{props.descriptions}</p>
             <button className="button" onClick={goToAbout}>
-              <span className="button-text">{heroContent.heroBtn}</span>
+              <span className="button-text">{props.buttonText}</span>
               <span className="button-icon fa fa-arrow-right"></span>
             </button>
           </div>

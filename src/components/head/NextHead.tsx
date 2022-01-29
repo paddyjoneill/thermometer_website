@@ -1,6 +1,5 @@
 import React from "react";
 import Head from 'next/head'
-import { getStaticProps } from "../../../pages";
 
 interface Props {
     pageTitle?: string

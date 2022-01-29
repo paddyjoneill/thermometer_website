@@ -1,7 +1,8 @@
 import React from "react";
+import { HomePageProps } from "../../interfaces/interfaces";
 import Hero from "../components/hero/Hero";
 
-interface Props { }
+interface Props extends HomePageProps{ }
 
 const HomePage = (props: Props) => {
     return (
@@ -13,7 +14,7 @@ const HomePage = (props: Props) => {
                     data-aos-duration="1200"
                 >
                     <div className="color-block d-none d-lg-block"></div>
-                    <Hero />
+                    <Hero {...props}/>
                 </div>
             </div>
         </div>

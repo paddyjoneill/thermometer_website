@@ -9,7 +9,7 @@ interface Props extends HomePageProps{}
 const Index = (props: Props) => {
 console.log({title: props.title})
 
-    return  <HomePage />
+    return  <HomePage {...props}/>
     
 }
 
