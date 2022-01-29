@@ -28,7 +28,7 @@ const NextHead = (props: Props) => {
         {/* <meta property="fb:app_id" content="your fb app id" /> */}
         <meta
             property="og:title"
-            content="Pat's Stats"
+            content={pageTitle}
         />
         <meta name="twitter:card" content={description} />
         <meta
