@@ -9,13 +9,17 @@ interface Props extends BlogPageProps { }
 
 const Blog = (props: Props) => {
 
-  const blogPosts = props.blogs.map(bp => {
+  const [isOpen, setIsOpen] = useState<boolean[]>(props.blogs.map(b => false))
 
-    const [isOpen, setIsOpen] = useState<boolean>(false)
+  const blogPosts = props.blogs.map((bp, idx) => {
 
-    const toggleModal = () => setIsOpen(!isOpen)
+    const toggleModal = () => {
+      const newState = [...isOpen]
+      newState[idx] = !newState[idx]
+      setIsOpen(newState)
+    }
 
-    return <div className="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+    return <div className="col-12 col-md-6 col-lg-6 col-xl-4 mb-30" key={idx}>
       <article className="post-container" onClick={toggleModal}>
         <div className="post-thumb">
           <div className="d-block position-relative overflow-hidden">
@@ -41,7 +45,7 @@ const Blog = (props: Props) => {
 
       {/* Start ModalOneBlogContent */}
       <Modal
-        isOpen={isOpen}
+        isOpen={isOpen[idx]}
         onRequestClose={toggleModal}
         contentLabel="My dialog"
         className="custom-modal dark"
