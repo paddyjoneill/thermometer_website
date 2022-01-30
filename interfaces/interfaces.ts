@@ -10,3 +10,21 @@ export interface HomePageProps extends BasePageProps {
     descriptions: string;
     buttonText: string;
 }
+
+export interface ContactPageProps extends BasePageProps {
+    streetAddress: string,
+    city: string,
+    postcode: string,
+    phoneNumber: string,
+    email: string
+}
+
+export interface BlogPostProps extends BasePageProps {
+    author: string;
+    date: string;
+    tags: string[];
+    title: string;
+    imageUrl: string;
+    content: string[];
+    quote: string;
+}
