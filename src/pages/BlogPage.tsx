@@ -1,7 +1,10 @@
 import React from "react";
+import { BlogPageProps } from "../../interfaces/interfaces";
 import Blog from "../components/blog/Blog";
 
-const BlogPage = () => {
+interface Props extends BlogPageProps {}
+
+const BlogPage = (props: Props) => {
 
     return (
         <div className="blog">
@@ -22,7 +25,7 @@ const BlogPage = () => {
             >
                 {/*  Articles Starts  */}
                 <div className="row pb-50">
-                    <Blog />
+                    <Blog {...props}/>
                 </div>
                 {/* Articles Ends */}
             </div>

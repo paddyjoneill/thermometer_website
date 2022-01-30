@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next'
 import React from 'react'
-import { BasePageProps, HomePageProps } from '../interfaces/interfaces'
+import { HomePageProps } from '../interfaces/interfaces'
 import { fetchHomePage } from '../services/dataFetching'
 import HomePage from '../src/pages/HomePage'
 

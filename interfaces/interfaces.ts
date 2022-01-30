@@ -27,4 +27,9 @@ export interface BlogPostProps extends BasePageProps {
     imageUrl: string;
     content: string[];
     quote: string;
+    snippet: string;
+}
+
+export interface BlogPageProps extends BasePageProps {
+    blogs: BlogPostProps[]
 }
