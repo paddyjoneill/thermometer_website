@@ -7,10 +7,7 @@ import HomePage from '../src/pages/HomePage'
 interface Props extends HomePageProps{}
 
 const Index = (props: Props) => {
-console.log({title: props.title})
-
     return  <HomePage {...props}/>
-    
 }
 
 export default Index
