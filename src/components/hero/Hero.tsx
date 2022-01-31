@@ -27,8 +27,6 @@ const Hero = (props: Props) => {
           className="col-lg-4 bg position-fixed d-none d-lg-block"
           style={{
             backgroundImage: `url(${
-              // process.env.PUBLIC_URL + 
-              // heroContent.heroImage
               props.imageUrl
             })`,
           }}
@@ -37,12 +35,12 @@ const Hero = (props: Props) => {
           <div>
             <img
               src={props.mobileImageUrl}
-              // src={`img/hero/${heroContent.heroMobileImage}.jpg`}
               className="img-fluid main-img-mobile d-sm-block d-lg-none"
               alt="hero man"
             />
             <h1 className="text-uppercase poppins-font">
-              {props.title}.
+              {props.title}
+              {/* <img src='img/hero/logo.png' /> */}
               <span>{props.subTitle}</span>
             </h1>
             <p className="open-sans-font">{props.descriptions}</p>
