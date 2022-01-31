@@ -8,7 +8,7 @@ const BlogContentTemplate = (props: Props) => {
 
   const firstParagraph = <p>{props.content[0]}</p>
 
-  const secondParagraphOn = props.content.slice(1).map(para => <p>{para}</p>)
+  const secondParagraphOn = props.content.slice(1).map((para, idx) => <p key={idx}>{para}</p>)
 
   const quoteBlock = props.quote !== "" ? <div className="quotebox">
     <div className="icon">
