@@ -1,84 +1,59 @@
 import React from "react";
+import { tagsListToString } from "../../../../helpers/helpers";
 import { BlogPostProps } from "../../../../interfaces/interfaces";
 
-interface Props extends BlogPostProps {}
+interface Props extends BlogPostProps { }
 
 const BlogContentTemplate = (props: Props) => {
 
+  const firstParagraph = <p>{props.content[0]}</p>
+
+  const secondParagraphOn = props.content.slice(1).map(para => <p>{para}</p>)
+
+  const quoteBlock = props.quote !== "" ? <div className="quotebox">
+    <div className="icon">
+      <img src="/img/blog/quote.svg" alt="blog quote" />
+    </div>
+    <p>
+      {props.quote}
+    </p>
+  </div> : null
+
+  const tags = tagsListToString(props.tags)
+
   return (
-    //  Article Starts
-    // <div className="custom-overlay dark">
     <div className="custom-modal dark">
       <div className="box_inner blog-post">
-    <article>
-      <div className="title-section text-left text-sm-center">
-        <h1>
-          Post <span>Details</span>
-        </h1>
-        <span className="title-bg">posts</span>
-      </div>
-      {/* Meta Starts */}
-
-      <div className="meta open-sans-font">
-        <span>
-          <i className="fa fa-user"></i> {props.author}
-        </span>
-        <span className="date">
-          <i className="fa fa-calendar"></i> {props.date}
-        </span>
-        <span>
-          <i className="fa fa-tags"></i> wordpress, business, economy, design
-        </span>
-      </div>
-      {/* Meta Ends */}
-      {/* Article Content Starts */}
-
-      <h1>{props.title}</h1>
-      <img src={props.imageUrl} className="img-fluid" alt="Blog" />
-      <div className="blog-excerpt open-sans-font pb-5">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <div className="quotebox">
-          <div className="icon">
-            <img src="/img/blog/quote.svg" alt="blog quote" />
+        <article>
+          <div className="title-section text-left text-sm-center">
+            <h1>
+              Post <span>Details</span>
+            </h1>
+            <span className="title-bg">posts</span>
           </div>
-          <p>
-            Most photographers find it hard to see interesting pictures in
-            places in which they are most familiar. A trip somewhere new seems
-            always exactly what our photography needed, as shooting away from
-            home consistently inspires us to new artistic heights.
-          </p>
-        </div>
-        <p>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
-        </p>
+
+          <div className="meta open-sans-font">
+            <span>
+              <i className="fa fa-user"></i> {props.author}
+            </span>
+            <span className="date">
+              <i className="fa fa-calendar"></i> {props.date}
+            </span>
+            <span>
+              <i className="fa fa-tags"></i> {tags}
+            </span>
+          </div>
+
+          <h1>{props.title}</h1>
+          <img src={props.imageUrl} className="img-fluid" alt="Blog" />
+          <div className="blog-excerpt open-sans-font pb-5">
+            {firstParagraph}
+            {quoteBlock}
+            {secondParagraphOn}
+          </div>
+        </article>
       </div>
-      {/* Article Content Ends */}
-    </article>
     </div>
-    </div>
-    // Article Ends
   );
 };
 
