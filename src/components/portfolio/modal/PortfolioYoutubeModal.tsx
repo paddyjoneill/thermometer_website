@@ -1,9 +1,7 @@
 import React from "react";
+import { PortfolioYoutubeItem } from "../../../../interfaces/interfaces";
 
-interface Props{
-    title: string
-    mediaUrl: string
-    mediaDescription: string
+interface Props extends PortfolioYoutubeItem{
 }
 
 const PortfolioYoutubeModal = (props: Props) => {
@@ -53,7 +51,7 @@ const PortfolioYoutubeModal = (props: Props) => {
             <div className="videocontainer">
               <iframe
                 className="youtube-video"
-                title={props.mediaDescription}
+                title={props.mediaAltText}
                 src={props.mediaUrl}
                 allowFullScreen
               ></iframe>

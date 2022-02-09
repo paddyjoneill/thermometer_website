@@ -3,11 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { getStaticProps } from "../../../../pages";
+import { PortfolioSliderItem } from "../../../../interfaces/interfaces";
 
-interface Props {
-    title: string
-    mediaUrl: string[]
-    mediaDescription: string[]
+interface Props extends PortfolioSliderItem{
 }
 
 const PortfolioImageSliderModal = (props: Props) => {
@@ -20,9 +18,9 @@ const PortfolioImageSliderModal = (props: Props) => {
         draggable: false,
     };
 
-    const images = props.mediaUrl.map((url, idx) => {
-        return <div className="slide_item">
-            <img src={url} alt={props.mediaDescription[idx]} />
+    const images = props.images.map((image, idx) => {
+        return <div key={20000 + idx}className="slide_item">
+            <img src={image.mediaUrl} alt={image.mediaAltText} />
         </div>
     })
 

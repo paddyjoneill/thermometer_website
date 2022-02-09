@@ -1,9 +1,7 @@
 import React from "react";
+import { PortfolioImageItem } from "../../../../interfaces/interfaces";
 
-interface Props {
-    title: string
-    mediaUrl: string
-    mediaDescription: string
+interface Props extends PortfolioImageItem{
 }
 
 const PortfolioImageModal = (props: Props) => {
@@ -53,7 +51,7 @@ const PortfolioImageModal = (props: Props) => {
             {/* Project Details Ends */}
     
             {/*  Main Project Content Starts */}
-            <img src={props.mediaUrl} alt={props.mediaDescription} />
+            <img src={props.mediaUrl} alt={props.mediaAltText} />
             {/* Main Project Content Ends */}
           </figure>
         </div>

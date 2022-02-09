@@ -1,5 +1,6 @@
 export interface BasePageProps {
     page: "Home" | "About" | "Portfolio" | "Contact" | "Blog"
+    // seo stuff
 }
 
 export interface HomePageProps extends BasePageProps {
@@ -32,4 +33,39 @@ export interface BlogPostProps extends BasePageProps {
 
 export interface BlogPageProps extends BasePageProps {
     blogs: BlogPostProps[]
+}
+
+export interface PortfolioPageProps extends BasePageProps {
+    portfolioItems: PortfolioItem[] 
+}
+
+export interface PortfolioItem {
+    type: "Image" | "Slider" | "Video" | "Youtube"
+    title: string
+}
+
+export interface PortfolioImageItem extends PortfolioItem{
+    mediaUrl: string
+    mediaAltText: string
+}
+
+export interface PortfolioSliderItem extends PortfolioItem{
+    images: SliderPicture[]
+}
+
+export interface SliderPicture {
+    mediaUrl: string
+    mediaAltText: string
+}
+
+export interface PortfolioYoutubeItem extends PortfolioItem{
+    mediaUrl: string
+    mediaAltText: string
+    pictureUrl: string
+}
+
+export interface PortfolioVideoItem extends PortfolioItem{
+    mediaUrl: string
+    mediaAltText: string
+    pictureUrl: string
 }

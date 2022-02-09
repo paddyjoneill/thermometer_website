@@ -1,0 +1,7 @@
+{
+    "type": "Youtube",
+    "title": "Sample",
+    "mediaUrl": "https://www.youtube.com/embed/7e90gBu4pas?enablejsapi=1&version=3&playerapiid=ytplayer",
+    "mediaAltText": "sample",
+    "pictureUrl": "img/projects/project-1.jpg"
+}

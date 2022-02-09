@@ -1,7 +1,10 @@
 import React from 'react'
+import { PortfolioPageProps } from '../../interfaces/interfaces'
 import Portfolio from '../components/portfolio/Portfolio'
 
-const PortfolioPage = () => {
+interface Props extends PortfolioPageProps{}
+
+const PortfolioPage = (props: Props) => {
     return (
         <div className="portfolio professional">
             <div
@@ -10,9 +13,9 @@ const PortfolioPage = () => {
                 data-aos-duration="1200"
             >
                 <h1>
-                    my <span>portfolio</span>
+                    <span>Products</span>
                 </h1>
-                <span className="title-bg">works</span>
+                <span className="title-bg">Tools</span>
             </div>
             {/* End title */}
             <div
@@ -21,7 +24,7 @@ const PortfolioPage = () => {
                 data-aos-duration="1200"
                 data-aos-delay="100"
             >
-                <Portfolio />
+                <Portfolio {...props}/>
             </div>
             {/* End grid gallery */}
         </div>

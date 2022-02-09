@@ -5,7 +5,6 @@
     "dev": "next dev",
     "build": "next build",
     "buildandexport": "npm run build && next export",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },

@@ -14,7 +14,7 @@ const Address = (props: Props) => {
     <>
       <p className="open-sans-font custom-span-contact position-relative">
         <i className="fa fa-map position-absolute"></i>
-        <span className="d-block">Address</span>{props.streetAddress},
+        <span className="d-block">Address</span>{props.streetAddress}, 
         {props.city}, {props.postcode}.
       </p>
       {/* End .custom-span-contact */}

@@ -16,7 +16,7 @@ const BlogPage = (props: Props) => {
                 <h1>
                     case <span>studies</span>
                 </h1>
-                <span className="title-bg">posts</span>
+                <span className="title-bg">jobs</span>
             </div>
             <div
                 className="container"

@@ -1,10 +1,8 @@
 import React from 'react';
+import { PortfolioVideoItem } from '../../../../interfaces/interfaces';
 
-interface Props {
-    title: string
-    mediaUrl: string
-    mediaDescription: string
-    pictureUrl: string
+interface Props extends PortfolioVideoItem {
+
 }
 
 const PortfolioVideoModal = (props: Props) => {

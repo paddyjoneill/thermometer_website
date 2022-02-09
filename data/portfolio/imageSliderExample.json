@@ -1,0 +1,19 @@
+{
+    "type": "Slider",
+    "title": "Sample",
+    "images" : [
+        {    
+            "mediaUrl": "img/projects/project-1.jpg",
+            "mediaAltText": "sample"
+        },
+        {    
+            "mediaUrl": "img/projects/project-2.jpg",
+            "mediaAltText": "sample"
+        },        
+        {    
+            "mediaUrl": "img/projects/project-3.jpg",
+            "mediaAltText": "sample"
+        }
+    ]
+
+}
