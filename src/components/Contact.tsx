@@ -17,9 +17,10 @@ const Contact = () => {
     console.log("Message submited: " + JSON.stringify(data));
   };
 
+
   return (
     <>
-      <form className="contactform" 
+      <form className="contactform"
       // onSubmit={handleSubmit(onSubmit)}
       >
         <div className="row">
