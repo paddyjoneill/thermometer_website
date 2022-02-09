@@ -13,9 +13,9 @@ const PortfolioPage = (props: Props) => {
                 data-aos-duration="1200"
             >
                 <h1>
-                    <span>Products</span>
+                    <span>Media</span>
                 </h1>
-                <span className="title-bg">Tools</span>
+                <span className="title-bg">Media</span>
             </div>
             {/* End title */}
             <div
