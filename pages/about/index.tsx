@@ -1,13 +1,14 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { BasePageProps } from "../../interfaces/interfaces";
+import { BasePageProps, ToolsPageProps } from "../../interfaces/interfaces";
+import { fetchToolsPage } from "../../services/dataFetching";
 import AboutPage from "../../src/pages/AboutPage";
 
-interface Props extends BasePageProps {}
+interface Props extends ToolsPageProps {}
 
 const About = (props: Props) => {
     return (
-            <AboutPage />
+            <AboutPage {...props}/>
          )
 }
 
@@ -15,7 +16,8 @@ export default About
 
 export const getStaticProps: GetStaticProps = async (context) => {
     
-    const props: BasePageProps= {page: "About"}
+    let props = await fetchToolsPage()
+    props.page = "About"
 
     return {
         props

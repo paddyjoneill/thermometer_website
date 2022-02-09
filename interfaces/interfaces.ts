@@ -39,6 +39,22 @@ export interface PortfolioPageProps extends BasePageProps {
     portfolioItems: PortfolioItem[] 
 }
 
+export interface ToolsPageProps extends BasePageProps {
+    tools: ToolInfo[]
+}
+
+export interface ToolInfo {
+    pictureUrl: string
+    toolName: string
+    downloadLink: string
+    toolMetadata: ToolMetadata[]
+}
+
+export interface ToolMetadata {
+    name: string
+    value: string
+}
+
 export interface PortfolioItem {
     type: "Image" | "Slider" | "Video" | "Youtube"
     title: string

@@ -37,7 +37,7 @@ const index = () => {
 
               <div className="col-12 mt-1">
                 <a className="button" href="img/cv.webp" download>
-                  <span className="button-text">Download CV</span>
+                  <span className="button-text">Download Flyer</span>
                   <span className="button-icon fa fa-download"></span>
                 </a>
               </div>
@@ -54,23 +54,23 @@ const index = () => {
         </div>
         {/* End .row */}
 
-        <hr className="separator" />
+        {/* <hr className="separator" /> */}
 
         {/* Skills Starts */}
-        <div className="row">
+        {/* <div className="row">
           <div className="col-12">
             <h3 className="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">
               My Skills
             </h3>
           </div>
           <Skills />
-        </div>
+        </div> */}
         {/* Skills Ends */}
 
-        <hr className="separator mt-1" />
+        {/* <hr className="separator mt-1" /> */}
 
         {/* Experience & Education Starts */}
-        <div className="row">
+        {/* <div className="row">
           <div className="col-12">
             <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">
               Experience <span>&</span> Education
@@ -86,7 +86,7 @@ const index = () => {
               <Education />
             </div>
           </div>
-        </div>
+        </div> */}
         {/*  Experience & Education Ends */}
       </div>
     </section>

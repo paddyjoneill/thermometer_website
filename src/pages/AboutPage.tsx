@@ -1,7 +1,9 @@
 import React from "react";
+import { ToolsPageProps } from "../../interfaces/interfaces";
 import Index from "../components/about/index"
+import Tools from "../components/about/Tools";
 
-interface Props { }
+interface Props extends ToolsPageProps{ }
 
 const AboutPage = (props: Props) => {
 
@@ -10,11 +12,12 @@ const AboutPage = (props: Props) => {
             <div data-aos="fade-up" data-aos-duration="1200">
                 <div className="title-section text-left text-sm-center">
                     <h1>
-                        ABOUT <span>ME</span>
+                        {/* ABOUT <span>ME</span> */}
+                        TOOLS
                     </h1>
-                    <span className="title-bg">Resume</span>
+                    <span className="title-bg">PRODUCTS</span>
                 </div>
-                <Index />
+                <Tools {...props}/>
             </div>
         </div>
     )

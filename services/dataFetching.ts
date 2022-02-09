@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { BlogPostProps, ContactPageProps, HomePageProps, PortfolioItem } from '../interfaces/interfaces';
+import { BlogPostProps, ContactPageProps, HomePageProps, PortfolioItem, ToolsPageProps } from '../interfaces/interfaces';
 
 const readFile = async (path: string) => {
     return new Promise((resolve, reject) => {
@@ -31,6 +31,11 @@ export const fetchHomePage: () => Promise<HomePageProps> = async () => {
     return settings
 }
 
+export const fetchToolsPage: () => Promise<ToolsPageProps> = async () => {
+    const pathName = './data/toolsPage.json'
+    const settings = await readFile(pathName) as ToolsPageProps
+    return settings
+}
 
 export const fetchContactPage: () => Promise<ContactPageProps> = async () => {
     const pathName = "./data/contactPage.json"

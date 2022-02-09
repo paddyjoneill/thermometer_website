@@ -11,10 +11,10 @@ interface Props {
 
 const menuItem = [
     { icon: "fa-home", menuName: "Home", route: "/" },
-    { icon: "fa-user", menuName: "About", route: "/about" },
-    { icon: "fa-briefcase", menuName: "Media", route: '/portfolio' },
+    { icon: "fa-wrench", menuName: "Tools", route: "/about" },
+    { icon: "fa-camera", menuName: "Media", route: '/portfolio' },
     { icon: "fa-envelope-open", menuName: "Contact", route: '/contact' },
-    { icon: "fa-comments", menuName: "CaseStudies", route: '/blog' },
+    { icon: "fa-book", menuName: "CaseStudies", route: '/blog' },
 ];
 
 const Navigation = (props: Props) => {
