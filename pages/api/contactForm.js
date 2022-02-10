@@ -6,7 +6,7 @@ exports.handler =  async (event, context, callback) => {
     const payload = JSON.parse(event.body)
     const { name, email, subject, message } = payload
 
-    const subject = 'New email enquiry from ' + name
+    // const subject = 'New email enquiry from ' + name
 
     sgMail.setApiKey(SENDGRID_API_KEY)
 
