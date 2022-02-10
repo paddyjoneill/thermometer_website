@@ -1,5 +1,5 @@
 export interface BasePageProps {
-    page: "Home" | "About" | "Portfolio" | "Contact" | "Blog"
+    page: "Home" | "About" | "Media" | "Contact" | "Blog"
     // seo stuff
 }
 

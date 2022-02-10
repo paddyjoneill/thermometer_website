@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         portfolioItems.push(portItem)
     }
 
-    const props: PortfolioPageProps= {page: "Portfolio", portfolioItems}
+    const props: PortfolioPageProps= {page: "Media", portfolioItems}
 
     return {
         props

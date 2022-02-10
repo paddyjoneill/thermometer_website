@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 interface Props {
     children: React.ReactNode
-    page: "Home" | "Tools" | "Portfolio" | "Contact" | "Blog"
+    page: "Home" | "Tools" | "Media" | "Contact" | "Blog"
 }
 
 const menuItem = [
