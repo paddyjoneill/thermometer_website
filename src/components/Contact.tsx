@@ -12,9 +12,34 @@ const Contact = () => {
   const updateSubject = (event: ChangeEvent<HTMLInputElement>) => setSubject(event.target.value)
   const updateMessage = (event: ChangeEvent<HTMLTextAreaElement>) => setMessage(event.target.value)
 
-  const onSubmit = (data: any, e: { target: { reset: () => void; }; }) => {
+  const onSubmit = async (data: any, e: { target: { reset: () => void; }; }) => {
     e.target.reset();
-    console.log("Message submited: " + JSON.stringify(data));
+
+    // validation...
+
+
+    const apiUrl = "/api/contactForm"
+
+    const payload = {name, email, subject, message}
+
+    const postSettings = {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      // mode: 'cors', // no-cors, *cors, same-origin
+      // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      // credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      // redirect: 'follow', // manual, *follow, error
+      // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(payload) // body data type must match "Content-Type" header
+    }
+
+    const response = await fetch(apiUrl, postSettings)
+
+    // catch error or success...
+    
+    console.log({response});
   };
 
 
@@ -43,17 +68,6 @@ const Contact = () => {
           <div className="col-12 col-md-6">
             <div className="form-group">
               <input
-                // {...register(
-                //   "email",
-                //   {
-                //     required: "Email is Required",
-                //     pattern: {
-                //       value: /\S+@\S+\.\S+/,
-                //       message: "Entered value does not match email format",
-                //     },
-                //   },
-                //   { required: true }
-                // )}
                 type="email"
                 name="email"
                 placeholder="YOUR EMAIL"
@@ -70,7 +84,6 @@ const Contact = () => {
           <div className="col-12 col-md-12">
             <div className="form-group">
               <input
-                // {...register("subject", { required: true })}
                 type="text"
                 name="subject"
                 placeholder="YOUR SUBJECT"
@@ -87,7 +100,6 @@ const Contact = () => {
           <div className="col-12">
             <div className="form-group">
               <textarea
-                // {...register("message", { required: true })}
                 name="message"
                 placeholder="YOUR MESSAGE"
                 value={message}
