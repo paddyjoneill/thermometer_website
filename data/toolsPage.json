@@ -3,7 +3,7 @@
     "tools" : [
         {
             "toolName" : "T1000",
-            "pictureUrl": "img/hero/thermometer.png",
+            "pictureUrl": "img/hero/thermometer-square.png",
             "downloadLink": "img/hero/thermometer.png",
             "toolMetadata" : [
                 {
@@ -18,7 +18,7 @@
         },
         {
             "toolName" : "T1000-BH",
-            "pictureUrl": "img/hero/thermometer.png",
+            "pictureUrl": "img/hero/thermometer-square.png",
             "downloadLink": "img/hero/thermometer.png",
             "toolMetadata" : [
                 {

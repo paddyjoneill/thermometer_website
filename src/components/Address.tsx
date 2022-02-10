@@ -21,14 +21,14 @@ const Address = (props: Props) => {
 
       <p className="open-sans-font custom-span-contact position-relative">
         <i className="fa fa-envelope-open position-absolute"></i>
-        <span className="d-block">mail me</span>{" "}
+        <span className="d-block">mail</span>{" "}
         <a href={`mailto:${props.email}`}>{props.email}</a>
       </p>
       {/* End .custom-span-contact */}
 
       <p className="open-sans-font custom-span-contact position-relative">
         <i className="fa fa-phone-square position-absolute"></i>
-        <span className="d-block">call me</span>{" "}
+        <span className="d-block">phone</span>{" "}
         <a href={`Tel ${props.phoneNumber}`}>{props.phoneNumber}</a>
       </p>
       {/* End .custom-span-contact */}

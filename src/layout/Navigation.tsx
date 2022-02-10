@@ -14,7 +14,7 @@ const menuItem = [
     { icon: "fa-wrench", menuName: "Tools", route: "/about" },
     { icon: "fa-camera", menuName: "Media", route: '/portfolio' },
     { icon: "fa-envelope-open", menuName: "Contact", route: '/contact' },
-    { icon: "fa-book", menuName: "CaseStudies", route: '/blog' },
+    { icon: "fa-book", menuName: "Case" + String.fromCharCode(160) + "Studies", route: '/blog' },
 ];
 
 const Navigation = (props: Props) => {
