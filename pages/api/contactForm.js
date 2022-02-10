@@ -3,7 +3,10 @@ const { SENDGRID_API_KEY } = process.env
 
 export default function  handler(req, res){
 
-    const payload = JSON.parse(req.body)
+    console.log({req: req.body})
+
+    const payload = req.body
+
     const { name, email, subject, message } = payload
 
     sgMail.setApiKey(SENDGRID_API_KEY)
