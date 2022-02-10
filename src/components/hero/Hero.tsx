@@ -2,23 +2,12 @@ import { useRouter } from "next/router";
 import React from "react";
 import { HomePageProps } from "../../../interfaces/interfaces";
 
-
-// const heroContent = {
-//   heroImage: "img/hero/dark.jpg",
-//   heroMobileImage: "img-mobile",
-//   heroTitleName: "AccSensum",
-//   heroDesignation: "Downhole Thermometers",
-//   heroDescriptions: `The best thermometers in the world, 
-//   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente fugiat velit dolor asperiores quia in veniam impedit facilis beatae sit dicta officia tempora eius, nam, harum mollitia quidem esse. Tenetur perspiciatis doloribus ex cum delectus assumenda molestias iusto veniam, quo consectetur magni. A corporis illo aliquam libero deserunt beatae.`,
-//   heroBtn: "learn more",
-// };
-
 interface Props extends HomePageProps {}
 
 const Hero = (props: Props) => {
   const router = useRouter()
 
-  const goToAbout = () => router.push('/about')
+  const goToAbout = () => router.push('/tools')
 
   return (
     <>
