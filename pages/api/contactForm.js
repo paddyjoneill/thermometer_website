@@ -1,7 +1,7 @@
 const sgMail = require('@sendgrid/mail')
 const { SENDGRID_API_KEY } = process.env
 
-export default function handler(req, res){
+export default function  handler(req, res){
 
     const payload = JSON.parse(req.body)
     const { name, email, subject, message } = payload
@@ -15,20 +15,8 @@ export default function handler(req, res){
         html: message,
     };
 
-    try{
-        await sgMail.send(msg)
-        
-        res.status(200).json({message: "Message Sent"})
-        // return {
-        //     statusCode: 200,
-        //     body: "Message sent"
-        // }
-    } catch(e){
+    sgMail.send(msg)
+    .then(() => res.status(200).json({message: "Message Sent"}) )
+    .catch(e => res.status(e.code).json({message: e.message}))
 
-        res.status(e.code).json({message: e.message})
-        // return {
-        //     statusCode: e.code,
-        //     body: e.message
-        // }
-    }
 };
