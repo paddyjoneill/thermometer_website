@@ -3,8 +3,6 @@ const { SENDGRID_API_KEY } = process.env
 
 export default function  handler(req, res){
 
-    console.log({req: req.body})
-
     const payload = req.body
 
     const { name, email, subject, message } = payload
@@ -13,8 +11,8 @@ export default function  handler(req, res){
 
     const msg = {
         to: 'info@accsensum.com',
-        from: email,
-        subject: subject + " from " + name,
+        from: 'paddyjoneill@hotmail.com',
+        subject: subject + " from " + name + " email " + email,
         html: message,
     };
 
