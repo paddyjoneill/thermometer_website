@@ -42,6 +42,8 @@ const Contact = () => {
     // catch error or success...
     
     console.log({response});
+
+    // clear the input boxes if successful
   };
 
 

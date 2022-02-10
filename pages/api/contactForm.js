@@ -1,37 +1,34 @@
 const sgMail = require('@sendgrid/mail')
 const { SENDGRID_API_KEY } = process.env
 
-exports.handler =  async (event, context, callback) => {
+export default function handler(req, res){
 
-    const payload = JSON.parse(event.body)
+    const payload = JSON.parse(req.body)
     const { name, email, subject, message } = payload
 
-    // const subject = 'New email enquiry from ' + name
-
     sgMail.setApiKey(SENDGRID_API_KEY)
-
-    // const body = Object.keys(payload).map((k) => {
-    //     return `${k}: ${payload[k]}`
-    // }).join("<br><br>");
 
     const msg = {
         to: 'info@accsensum.com',
         from: email,
-        subject: subject ? subject : 'Contact Form Submission',
+        subject: subject + " from " + name,
         html: message,
     };
 
     try{
         await sgMail.send(msg)
         
-        return {
-            statusCode: 200,
-            body: "Message sent"
-        }
+        res.status(200).json({message: "Message Sent"})
+        // return {
+        //     statusCode: 200,
+        //     body: "Message sent"
+        // }
     } catch(e){
-        return {
-            statusCode: e.code,
-            body: e.message
-        }
+
+        res.status(e.code).json({message: e.message})
+        // return {
+        //     statusCode: e.code,
+        //     body: e.message
+        // }
     }
 };
