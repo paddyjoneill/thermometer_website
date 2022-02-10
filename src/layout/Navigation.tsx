@@ -6,12 +6,12 @@ import { useRouter } from "next/router";
 
 interface Props {
     children: React.ReactNode
-    page: "Home" | "About" | "Portfolio" | "Contact" | "Blog"
+    page: "Home" | "Tools" | "Portfolio" | "Contact" | "Blog"
 }
 
 const menuItem = [
     { icon: "fa-home", menuName: "Home", route: "/" },
-    { icon: "fa-wrench", menuName: "Tools", route: "/about" },
+    { icon: "fa-wrench", menuName: "Tools", route: "/tools" },
     { icon: "fa-camera", menuName: "Media", route: '/portfolio' },
     { icon: "fa-envelope-open", menuName: "Contact", route: '/contact' },
     { icon: "fa-book", menuName: "Case" + String.fromCharCode(160) + "Studies", route: '/blog' },
@@ -20,6 +20,8 @@ const menuItem = [
 const Navigation = (props: Props) => {
 
     const tabIndex = menuItem.map(m => m.menuName).indexOf(props.page)
+
+    console.log(props.page)
 
     const router = useRouter()
 
