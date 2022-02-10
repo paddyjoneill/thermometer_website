@@ -2,7 +2,6 @@ import React from "react";
 import Address from "../components/Address";
 import Contact from "../components/Contact";
 import Social from "../components/Social";
-import FormSiteForm from "../components/FormSiteForm"
 
 interface Props {
   streetAddress: string
@@ -52,10 +51,6 @@ const ContactPage = (props: Props) => {
           {/*  Contact Form Starts  */}
           <div className="col-12 col-lg-8">
             <Contact />
-            {/* <FormSiteForm /> */}
-
-
-
           </div>
           {/*  Contact Form Ends */}
         </div>
