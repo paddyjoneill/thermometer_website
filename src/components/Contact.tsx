@@ -12,8 +12,10 @@ const Contact = () => {
   const updateSubject = (event: ChangeEvent<HTMLInputElement>) => setSubject(event.target.value)
   const updateMessage = (event: ChangeEvent<HTMLTextAreaElement>) => setMessage(event.target.value)
 
-  const onSubmit = async (data: any, e: { target: { reset: () => void; }; }) => {
-    e.target.reset();
+  // const onSubmit = async (data: any, e: { target: { reset: () => void; }; }) => {
+    
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
     // validation...
 
@@ -46,7 +48,7 @@ const Contact = () => {
   return (
     <>
       <form className="contactform"
-      // onSubmit={handleSubmit(onSubmit)}
+      onSubmit={onSubmit}
       >
         <div className="row">
           <div className="col-12 col-md-6">
