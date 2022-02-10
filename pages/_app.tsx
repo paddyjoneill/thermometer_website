@@ -12,9 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     AOS.init();
   }, []);
 
-  const page = pageProps.page
-
-  return <Layout page={page}>
+  return <Layout {...pageProps}>
     <Component {...pageProps} />
   </Layout>
   
