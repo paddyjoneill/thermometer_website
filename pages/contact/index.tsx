@@ -17,7 +17,6 @@ export default Contact
 export const getStaticProps: GetStaticProps = async (context) => {
 
   const props = await fetchContactPage() as ContactPageProps
-  props.page = "Contact"
 
   return {
     props

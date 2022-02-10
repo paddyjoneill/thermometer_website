@@ -1,4 +1,11 @@
 {
+    "page": "CaseStudies",
+    "seo": {
+        "pageTitle": "Case Study 1",
+        "description": "Case Study 1 of the Accsensum Downhole Sensors",
+        "url": "https://accsensum.com/casestudies",
+        "openGraphPictureUrl": ""
+    },
     "author" : "Chris Wells",
     "date": "20-Jan-2022",
     "tags": [ "thermometers, wirelines, downhole"],

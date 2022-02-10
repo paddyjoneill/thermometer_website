@@ -6,15 +6,15 @@ import { useRouter } from "next/router";
 
 interface Props {
     children: React.ReactNode
-    page: "Home" | "Tools" | "Media" | "Contact" | "Blog"
+    page: "Home" | "Tools" | "Media" | "Contact" | "CaseStudies"
 }
 
 const menuItem = [
     { icon: "fa-home", menuName: "Home", route: "/" },
     { icon: "fa-wrench", menuName: "Tools", route: "/tools" },
-    { icon: "fa-camera", menuName: "Media", route: '/portfolio' },
+    { icon: "fa-camera", menuName: "Media", route: '/media' },
     { icon: "fa-envelope-open", menuName: "Contact", route: '/contact' },
-    { icon: "fa-book", menuName: "Case" + String.fromCharCode(160) + "Studies", route: '/blog' },
+    { icon: "fa-book", menuName: "Case" + String.fromCharCode(160) + "Studies", route: '/casestudies' },
 ];
 
 const Navigation = (props: Props) => {

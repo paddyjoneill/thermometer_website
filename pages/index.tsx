@@ -14,10 +14,9 @@ export default Index
 
 export const getStaticProps: GetStaticProps = async (context) => {
 
-    const homePageProps = await fetchHomePage()
-    homePageProps.page = "Home"
+    const props = await fetchHomePage()
 
     return {
-        props: homePageProps
+        props
     }
   }

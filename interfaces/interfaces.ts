@@ -1,6 +1,14 @@
 export interface BasePageProps {
     page: "Home" | "About" | "Media" | "Contact" | "Blog"
     // seo stuff
+    seo: SeoProps
+}
+
+export interface SeoProps {
+    pageTitle: string
+    description: string
+    url: string
+    openGraphPictureUrl: string
 }
 
 export interface HomePageProps extends BasePageProps {

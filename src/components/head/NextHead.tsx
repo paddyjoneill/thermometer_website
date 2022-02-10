@@ -1,19 +1,15 @@
 import React from "react";
 import Head from 'next/head'
+import { SeoProps } from "../../../interfaces/interfaces";
 
-interface Props {
-    pageTitle?: string
-    description?: string
-    url?: string
-    openGraphPictureUrl?: string
-}
+interface Props extends SeoProps{}
 
 const NextHead = (props: Props) => {
 
-    const pageTitle = props.pageTitle ?? "AccSensum Thermometers"
-    const description = props.description ?? "Downhole Thermometers"
-    const url = props.url ?? "https://thermometer-site.netlify.app"
-    const openGraphPictureUrl = props.openGraphPictureUrl ?? "http://patsstats.co.uk/images/facebook/patsstats-facebook-og.jpg"
+    const pageTitle = props.pageTitle 
+    const description = props.description 
+    const url = props.url
+    const openGraphPictureUrl = props.openGraphPictureUrl
 
     return <Head>
         <title>{pageTitle}</title>
@@ -25,6 +21,7 @@ const NextHead = (props: Props) => {
         {/* facebook open graph stuff */}
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
+
         {/* <meta property="fb:app_id" content="your fb app id" /> */}
         <meta
             property="og:title"

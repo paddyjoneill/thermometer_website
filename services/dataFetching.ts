@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { BlogPostProps, ContactPageProps, HomePageProps, PortfolioItem, ToolsPageProps } from '../interfaces/interfaces';
+import { BlogPageProps, BlogPostProps, ContactPageProps, HomePageProps, PortfolioItem, PortfolioPageProps, ToolsPageProps } from '../interfaces/interfaces';
 
 const readFile = async (path: string) => {
     return new Promise((resolve, reject) => {
@@ -42,6 +42,20 @@ export const fetchContactPage: () => Promise<ContactPageProps> = async () => {
     const data = await readFile(pathName) as ContactPageProps
     return data
 }
+
+export const fetchBlogPage: () => Promise<BlogPageProps> = async () => {
+    const pathName = "./data/blogPage.json"
+    const data = await readFile(pathName) as BlogPageProps
+    return data
+}
+
+export const fetchMediaPage: () => Promise<PortfolioPageProps> = async () => {
+    const pathName = "./data/mediaPage.json"
+    const data = await readFile(pathName) as PortfolioPageProps
+    return data
+}
+
+
 
 export const fetchBlogPost: (name: string) => Promise<BlogPostProps> = async (name: string) => {
     const baseUrl = "./data/blogs/"

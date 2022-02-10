@@ -1,5 +1,11 @@
 {
     "page" : "Tools",
+    "seo": {
+        "pageTitle": "Tools",
+        "description": "Tools by Accsensum Downhole Sensors",
+        "url": "https://accsensum.com/tools",
+        "openGraphPictureUrl": ""
+    },
     "tools" : [
         {
             "toolName" : "T1000",

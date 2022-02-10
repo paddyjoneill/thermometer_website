@@ -1,7 +1,14 @@
 {
-    "streetAddress": "Unit 11, Meikle Clinerty Farm",
-    "city": "Kinellar",
-    "postcode": "AB21 0TZ",
-    "phoneNumber": "+44 -",
-    "email": "info@accsensum.com"
-  }
+  "page": "Contact",
+  "seo": {
+    "pageTitle": "Contact",
+    "description": "Contact Page for Accsensum",
+    "url": "https://accsensum.com/contact",
+    "openGraphPictureUrl": ""
+  },
+  "streetAddress": "Unit 11, Meikle Clinerty Farm",
+  "city": "Kinellar",
+  "postcode": "AB21 0TZ",
+  "phoneNumber": "+44 -",
+  "email": "info@accsensum.com"
+}

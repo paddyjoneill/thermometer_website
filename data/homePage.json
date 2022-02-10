@@ -1,4 +1,11 @@
 {
+    "page": "Home",
+    "seo": {
+        "pageTitle": "Accsensum Downhole Sensors",
+        "description": "Accsensum Downhole Sensors",
+        "url": "https://accsensum.com/",
+        "openGraphPictureUrl": ""
+    },
     "imageUrl": "img/hero/thermometer.png",
     "mobileImageUrl": "img/hero/thermometer-mobile.png",
     "title": "AccSensum",
