@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 
 interface Props {
     children: React.ReactNode
-    page: "Home" | "About" | "Portfolio" | "Contact" | "Blog"
+    page: "Home" | "Tools" | "Portfolio" | "Contact" | "Blog"
     // pageTitle: string
     // pageDescription: string
 }
